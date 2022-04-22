@@ -41,7 +41,7 @@ describe('Test routes', () => {
                 .end((err, res) => {
                     res.should.have.status((200));
                     res.body.should.be.a('object');
-                    res.body.config.team.should.a('string');
+                    res.body.config.team.should.be.a('string');
                     done();
                 })
         });
