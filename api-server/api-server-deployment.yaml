@@ -6,7 +6,7 @@ spec:
   selector:
     matchLabels:
       app: demo-api
-  replicas: 1 # tells deployment to run 1 pod matching the template
+  replicas: 3 # tells deployment to run 1 pod matching the template
   template:
     metadata:
       labels:
@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: demo-api
-        image: gcr.io/roidtc-april-2022-u203/api-server-image:v1.1.1
+        image: gcr.io/roidtc-april-2022-u203/api-server-image:v2.2.2
         env:
         - name: PORT
           value: "8082"
